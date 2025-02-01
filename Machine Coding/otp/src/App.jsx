@@ -1,19 +1,53 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import OtpLogin from './components/OtpLogin'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [showOtp,setShowOtp] = useState(false);
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
 
-  const onOtpSubmit = (combinedOtp) =>{
-    console.log("login successful :"+combinedOtp);
-  }
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (!validateEmail(email)) {
+      setError('Please enter a valid email address');
+      return;
+    }
+    setError('');
+    setShowOtp(true);
+  };
+
+  const onOtpSubmit = (combinedOtp) => {
+    console.log("login successful :" + combinedOtp);
+  };
   return (
     <div className='App'>
-      <h1>Hello, Login with otp</h1>
-      <OtpLogin length={4} onOtpSubmit={onOtpSubmit} />
+      {
+        showOtp?<>
+                <h1>Hello, Login with otp</h1>
+                <OtpLogin length={4} onOtpSubmit={onOtpSubmit} />
+        </> : <>
+          <h1>Enter Phone number</h1>
+          <form onSubmit={handleSubmit}>
+            <input type='number' name='phone'placeholder='Enter Phone number' ></input>
+            <input
+              type='email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder='Enter Email Address'
+            />
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+            <button type='submit'>Login</button>
+          </form>
+        </>
+
+      }
+      
     </div>
   )
 }
