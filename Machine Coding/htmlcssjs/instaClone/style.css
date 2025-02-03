@@ -2,27 +2,216 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Roboto", serif;
 }
 #main{
     display: flex;
     height: 100vh;
 }
 #sidebar{
-    background-color: aqua;
     width: 20%;
+    display: flex;
+    flex-direction: column;
 }
-ul{
-    list-style: none;
+#sidebar>img{
+    width: 103px;
+    height: 29px;
+    margin: 40px 0px 0px 24px;
 }
-li{
+#sidebar>ul{
+    list-style-type: none;
+    margin-top: 30px;
+}
+#sidebar>ul>li{
     display: flex;
     align-items: center;
+    margin-top: 10px;
     padding: 10px 20px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+#sidebar>ul>li>img{
+    padding-right: 16px;
 }
 
 #scroll-container{
-    background-color: blueviolet;
     width: 80%;
     overflow: hidden;
     overflow-y: scroll;
+    display: flex;
+    position: relative;
+}
+#stories{
+    display: flex;
+    padding: 16px 0px 16px 16px;
+    justify-content: space-between;
+}
+#story{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 66px;
+    height: 66px;
+    padding-top: 2px;
+    padding-left: 3px;
+    padding-right: 5px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    background-image: url("./assets/frame.png");
+}
+#story>img{
+    height: 56px;
+    width: 56px;
+    border-radius: 100%;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+#right-box{
+    padding: 16px 0px 16px 16px;
+    max-width: 400px;
+    margin-left: 30px;
+    position: absolute;
+    top: 5px;
+    right: 46px;
+    justify-content: space-between;
+    width: 25%;
+    align-items: center;
+}
+#user-profile{
+    display: flex;
+}
+
+#user{
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+#user-profile>img{
+    width: 56px;
+    height: 56px;
+    border-radius: 28px;
+}
+#user-profile>a{
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+#userid{
+    font-family: roboto;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}
+#username{
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #8E8E8E;
+}
+
+#suggested-user-profile{
+    display: flex;
+    padding: 5px;
+}
+#suggested-user-profile>img{
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+}
+#suggested-user-profile>a{
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+#suggested-username{
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    color: #8E8E8E;
+}
+#suggested>h5{
+    font-family: Roboto;
+    color: #8E8E8E;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+#footer>a{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration-skip-ink: none;
+    color: #C7C7C7;
+}
+#crt{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration-skip-ink: none;
+    color: #C7C7C7;
+    margin-top: 10%;
+}
+#footer{
+    left: 74.67px;
+    padding: 1px 4.97px 1px 0px;
+}
+#posts{
+    margin-top: 20px;
+    margin-left: 100px;
+    justify-content: center;
+}
+#posts>img{
+    width: 468px;
+    height: 585px;
+    gap: 0px;
+    opacity: 0px;
+}
+#title{
+    width: 468px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+#subtitle>img{
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    margin-right: 10px;
+}
+#subtitle{
+    display: flex;
+    padding: 7px 242.77px 10px 0px;
+    opacity: 0px;
+    align-items: center;
+
+}
+#reactions{
+    display: flex;
+}
+#reactions>img{
+    margin: 5px 5px 5px 5px;
+}
+#caption{
+    display: flex;
+    padding: 2pxpx;
 }
