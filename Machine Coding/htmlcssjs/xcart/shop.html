@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopCart - Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1><a href="index.html">ShopCart</a></h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="shop-container">
+        <aside class="filters">
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Search products...">
+            </div>
+
+            <div class="filter-section">
+                <h3>Categories</h3>
+                <div id="category-filters"></div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Price Range</h3>
+                <input type="range" id="price-range" min="0" max="1000" step="10" value="1000">
+                <span id="price-value">$1000</span>
+            </div>
+        </aside>
+
+        <section class="products" id="products-grid">
+            <div class="loading">Loading products...</div>
+        </section>
+    </main>
+
+    <script src="js/cart.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>

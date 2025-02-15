@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Shop</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">ShopEase</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/shop.html" class="active">Shop</a>
+            <a href="/cart.html">Cart <span class="cart-count">0</span></a>
+            <a href="/profile.html" class="profile-link hidden">Profile</a>
+            <a href="/login.html" class="auth-link">Login</a>
+        </div>
+    </nav>
+
+    <main class="shop-container">
+        <aside class="filters">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search products...">
+            </div>
+            
+            <div class="filter-section">
+                <h3>Categories</h3>
+                <div class="filter-options" id="categoryFilters">
+                    <label><input type="checkbox" value="men's clothing"> Men's Clothing</label>
+                    <label><input type="checkbox" value="women's clothing"> Women's Clothing</label>
+                    <label><input type="checkbox" value="electronics"> Electronics</label>
+                    <label><input type="checkbox" value="jewelery"> Jewelry</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Price Range</h3>
+                <div class="price-range">
+                    <input type="range" id="priceRange" min="0" max="1000" step="10">
+                    <span id="priceValue">$0 - $1000</span>
+                </div>
+            </div>
+        </aside>
+
+        <section class="products-grid" id="productsContainer">
+            <!-- Products will be dynamically inserted here -->
+        </section>
+    </main>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/shop.js"></script>
+</body>
+</html>
